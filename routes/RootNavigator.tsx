@@ -20,9 +20,9 @@ export type RootStackScreenProps<T extends keyof RootStackParamList> =
 const RootNavigator = () => {
   return (
     <Stack.Navigator
-    screenOptions={{
-      headerShown: false
-    }}
+      screenOptions={{
+        headerShown: false,
+      }}
     >
       <Stack.Screen name="TabsStack" component={TabsNavigator} />
       <Stack.Screen name="SingleFormation" component={SingleFormation} />

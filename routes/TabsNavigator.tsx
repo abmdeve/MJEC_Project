@@ -144,13 +144,14 @@ const TabButton = (props) => {
 const TabsNavigator = () => {
   return (
     <TabsStack.Navigator
-    screenOptions={{
-        headerShown: false
-    }}
-    >
+      screenOptions={{
+        headerShown: false,
+      }}
+     >
       {TABS.map((item, index) => {
         return (
           <TabsStack.Screen
+            key={index}
             name={item.name}
             component={item.component}
             options={{
