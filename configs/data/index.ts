@@ -214,3 +214,66 @@ export const CATEGORIES_FORMATION = [
     title: "Photographie",
   },
 ];
+
+export const SERVICES = [
+  {
+    id: 1,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 2,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 3,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 4,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 5,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 6,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 7,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 8,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 9,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+  {
+    id: 10,
+    title: "Evénement",
+    subTitle: "Organisation event",
+    categorie: "Evenementiel",
+  },
+];

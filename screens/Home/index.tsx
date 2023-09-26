@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import MasonryList from "reanimated-masonry-list";
 import { TabsStackScreenProps } from "../../routes/TabsNavigator";
 import { CATEGORIES_FORMATION, FORMATION, SLIDES } from "../../configs/data";
@@ -17,25 +18,50 @@ import CardMansoryList from "../../components/FormationCard";
 import { ITEMS } from "../../configs/data";
 import Carousel from "../../components/Carousel";
 import CategoriesFormation from "../../components/CategoriesFormation";
+import Header from "../../components/Header";
+import { COLORS } from "../../configs/Colors";
 
 const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
-  const [categoryIndex, setCategoryIndex] = useState(0)
+  const [categoryIndex, setCategoryIndex] = useState(0);
   const width = Dimensions.get("window").width / 2;
   return (
     <View style={{ flex: 1, marginTop: 20 }}>
+      
       <SafeAreaView style={{ flex: 1 }} edges={["right", "left"]}>
+        
         {/* CAROUSEL COMPONENT */}
-        {/* <Carousel slides={SLIDES} /> */}
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "bold",
+            marginLeft: 15,
+            marginBottom: 10,
+          }}
+        >
+          News
+        </Text>
+        <Carousel slides={SLIDES} />
         {/* <View style={{marginTop: 19}}/> */}
         {/* CATEGORIES COMPONENT */}
-        <CategoriesFormation
-        data={CATEGORIES_FORMATION}
-        categoryIndex={categoryIndex}
-        setCategoryIndex={setCategoryIndex}
-        />
 
         {/* LIST FORMATION COMPONENT */}
-        <View style={{marginTop: 19}}/>
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "bold",
+            marginLeft: 15,
+            marginVertical: 10,
+          }}
+        >
+          Formation
+        </Text>
+        <View style={{ marginBottom: 10 }}>
+        <CategoriesFormation
+          data={CATEGORIES_FORMATION}
+          categoryIndex={categoryIndex}
+          setCategoryIndex={setCategoryIndex}
+        />
+      </View>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ marginTop: 10 }}
@@ -54,6 +80,7 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
                     color={item.color}
                     aspectratio={item.aspectratio}
                     width={width}
+                    onPress={() => navigation.navigate("SingleFormation")}
                   />
                 );
               })}
@@ -70,6 +97,7 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
                     color={item.color}
                     aspectratio={item.aspectratio}
                     width={width}
+                    onPress={() => navigation.navigate("SingleFormation")}
                   />
                 );
               })}

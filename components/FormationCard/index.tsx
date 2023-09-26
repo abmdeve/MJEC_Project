@@ -190,7 +190,7 @@ const CardMansoryList = () => {
                 borderRadius: 24,
                 padding: 4,
               }}
-            >
+             >
               <Image
                 source={{ uri: item.imageUrl }}
                 // source={{ uri: AVATAR_URL }}

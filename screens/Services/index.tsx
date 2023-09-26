@@ -1,14 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { SERVICES, SLIDES } from "../../configs/data";
+import Carousel from "../../components/Carousel";
+import ServicesCard from "../../components/ServicesCard";
+import Search from "../../components/Search";
 
 const Services = () => {
+  const [value, setValue] = useState("")
   return (
-    <View>
-      <Text>Services</Text>
+    <View style={{ flex: 1 }}>
+      <SafeAreaView style={{flex: 1}} edges={[ "right", "left", "top"]}>
+        <Text style={{fontSize: 20, fontWeight: "bold"}}>Nos services</Text>
+         {/* <Carousel slides={SLIDES} />  */}
+         <Search value={value} onChange={setValue} keyboardType="name" />
+         <ServicesCard data={SERVICES} />
+      </SafeAreaView>
     </View>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

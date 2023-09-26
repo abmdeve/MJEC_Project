@@ -18,4 +18,6 @@ export const COLORS = {
   darkCyanIcon: "#1FB3D7",
   lightCurrentIcon: "#FEF1DE",
   darkCurrentIcon: "#FDD888",
+  textCurrent: "#64727E",
+
 };

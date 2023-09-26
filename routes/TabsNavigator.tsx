@@ -43,7 +43,7 @@ const TABS = [
   {
     name: "Services",
     component: Services,
-    icon: "shopping-cart",
+    icon: "account-tree",
     color: COLORS.darkBlueIcon,
     white: "fff",
     route: "Services",
@@ -61,7 +61,7 @@ const TABS = [
   {
     name: "About",
     component: About,
-    icon: "person",
+    icon: "info-outline",
     color: COLORS.darkPurpleIcon,
     white: "fff",
     route: "A propos",

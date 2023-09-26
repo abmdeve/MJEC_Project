@@ -7,9 +7,10 @@ import {
   Image,
   ImageBackground,
 } from "react-native";
-import { BlurView } from "expo-blur";
 import { useTheme } from "@react-navigation/native";
+import { BlurView } from "expo-blur";
 import { MaterialIcons } from "@expo/vector-icons";
+import Ripple from "react-native-material-ripple";
 
 export interface CardProps {
   color?: string;
@@ -19,6 +20,7 @@ export interface CardProps {
   price: number;
   i: number;
   image: any;
+  onPress: () => void;
 }
 const Card = ({
   color,
@@ -28,11 +30,13 @@ const Card = ({
   price,
   i,
   image,
+  onPress,
 }: CardProps) => {
   const { colors } = useTheme();
 
   return (
-    <View
+    <Ripple
+      onPress={onPress}
       style={{
         backgroundColor: color,
         width: width,
@@ -72,7 +76,7 @@ const Card = ({
               >
                 {title}
               </Text>
-              <View
+              {/* <View
                 style={{
                   backgroundColor: colors.background,
                   borderRadius: 100,
@@ -87,7 +91,7 @@ const Card = ({
                   size={20}
                   color={colors.text}
                 />
-              </View>
+              </View> */}
             </View>
             {/* BLUR EFFET */}
             <View style={{ flex: 1 }} />
@@ -127,7 +131,7 @@ const Card = ({
           </View>
         </ImageBackground>
       </View>
-    </View>
+    </Ripple>
   );
 };
 
