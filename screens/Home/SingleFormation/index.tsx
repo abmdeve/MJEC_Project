@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 import { COLORS } from "../../../configs/Colors";
 import { RootStackScreenProps } from "../../../routes/RootNavigator";
 
@@ -15,9 +15,9 @@ const SingleFormation = ({
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="chevron-back-circle" size={30} />
         </TouchableOpacity>
-        <TouchableOpacity>
+        {/* <TouchableOpacity>
           <Ionicons name="heart" size={30} />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
       <Image
         source={{
@@ -33,7 +33,7 @@ const SingleFormation = ({
             <Text style={styles.price}>$ 660.88</Text>
           </View>
         </View>
-
+        {/* RATING */}
         <View style={styles.ratingRow}>
           <View style={styles.raing}>
             {[1, 2, 3, 4, 5].map((index) => {
@@ -41,18 +41,26 @@ const SingleFormation = ({
                 <Ionicons key={index} name="star" size={24} color={"gold"} />
               );
             })}
-            <Text style={styles.ratingText}>{" "} (4.9)</Text>
+            <Text style={styles.ratingText}> (4.9)</Text>
           </View>
-          <View style={styles.raing}>
-            {[1, 2, 3, 4, 5].map((index) => {
-              return (
-                <Ionicons key={index} name="star" size={24} color={"gold"} />
-              );
-            })}
-            <Text style={styles.ratingText}>{" "} (4.9)</Text>
-          </View>
+          
         </View>
-
+        {/* DESCRIPTION */}
+        <View style={styles.descriptionWrapper}>
+          <Text style={styles.description}>DESCRIPTION...</Text>
+          <Text style={styles.descriptionText}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            ultrices, justo nec fringilla posuere, nunc arcu scelerisque massa,
+            eget euismod tortor justo ac urna. Nullam rhoncus urna id dapibus
+            malesuada. Sed bibendum feugiat odio, in suscipit ipsum lacinia eu.
+            Proin condimentum vestibulum tellus, in efficitur justo tincidunt
+            et. Nullam varius libero vel massa venenatis, vel egestas metus
+            varius. Integer eu urna at enim sollicitudin laoreet. In fermentum
+            dui vel libero ultrices, in volutpat odio eleifend. Nulla facilisi.
+            Vivamus aliquam odio ac justo finibus, nec tincidunt ligula
+            varius....
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -93,7 +101,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "80%",
+    width: "90%",
     top: 20,
   },
   title: {
@@ -115,7 +123,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "50%",
+    width: "100%",
     top: 5,
   },
   raing: {
@@ -127,5 +135,19 @@ const styles = StyleSheet.create({
   },
   ratingText: {
     color: COLORS.textCurrent,
+  },
+  descriptionWrapper: {
+    marginTop: 15,
+    marginHorizontal: 10,
+  },
+  description: {
+    fontWeight: "300",
+    fontSize: 14,
+    marginBottom: 10,
+  },
+  descriptionText: {
+    fontSize: 12,
+    textAlign: "justify",
+    marginBottom: 10,
   },
 });
