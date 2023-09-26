@@ -3,5 +3,12 @@ export interface FORMER {
   name: string;
   jobTitle: string;
   institut: string;
-  image: any,
+  image: any;
+}
+
+export interface ABOUT {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: any;
 }

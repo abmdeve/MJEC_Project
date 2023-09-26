@@ -360,3 +360,46 @@ export const FORMER = [
     institut: "formateur à MJEC",
   },
 ];
+
+export const ABOUT = [
+  {
+    id: 1,
+    title: "Directeur Générale ",
+    name: "John Doe",
+    description: "Responsable & fondateur",
+    imageUrl:
+      "https://cloud.githubusercontent.com/assets/21040043/24240405/0ba41234-0fe4-11e7-919b-c3f88ced349c.jpg",
+  },
+  {
+    id: 2,
+    title: "Adjoint directeur générale",
+    name: "John Doe",
+    description: "Premier vice responsable",
+    imageUrl:
+      "https://cloud.githubusercontent.com/assets/21040043/24240419/1f553dee-0fe4-11e7-8638-6025682232b1.jpg",
+  },
+  {
+    id: 3,
+    title: "Sécrétaire générale",
+    name: "John Doe",
+    description: "Responsable du sécrétariat",
+    imageUrl:
+      "https://cloud.githubusercontent.com/assets/21040043/24240422/20d84f6c-0fe4-11e7-8f1d-9dbc594d0cfa.jpg",
+  },
+  {
+    id: 4,
+    title: "Sécrétaire générale",
+    name: "John Doe",
+    description: "Responsable du sécrétariat",
+    imageUrl:
+      "https://cloud.githubusercontent.com/assets/21040043/24240422/20d84f6c-0fe4-11e7-8f1d-9dbc594d0cfa.jpg",
+  },
+  {
+    id: 5,
+    title: "Sécrétaire générale",
+    name: "John Doe",
+    description: "Responsable du sécrétariat",
+    imageUrl:
+      "https://cloud.githubusercontent.com/assets/21040043/24240422/20d84f6c-0fe4-11e7-8f1d-9dbc594d0cfa.jpg",
+  },
+];
