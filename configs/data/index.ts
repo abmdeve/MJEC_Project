@@ -277,3 +277,86 @@ export const SERVICES = [
     categorie: "Evenementiel",
   },
 ];
+
+export const FORMER = [
+  {
+    id: 1,
+    image:
+      "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=2340&q=80",
+    name: "M. De-Mbou De-dieu",
+    jobTitle: "@fullstack developper",
+    institut: "formateur à MJEC",
+  },
+  {
+    id: 2,
+    image:
+      "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=986&q=80",
+    name: "@bm_dev",
+    jobTitle: "@fullstack mobile developper",
+    institut: "formateur à MJEC",
+  },
+  {
+    id: 3,
+    image:
+      "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
+    name: "Mme. Bienvenue Dorjos",
+    jobTitle: "@web developper",
+    institut: "formatrice à MJEC",
+  },
+  {
+    id: 4,
+    image:
+      "https://images.unsplash.com/photo-1556217477-d325251ece38?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=1020&q=80",
+    name: "M. John Doe",
+    jobTitle: "@entrepreunariat",
+    institut: "formateur à MJEC",
+  },
+  {
+    id: 5,
+    image:
+      "https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
+    name: "M. John Doe",
+    jobTitle: "@finance management",
+    institut: "formateur à MJEC",
+  },
+  {
+    id: 6,
+    image:
+      "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
+    name: "M. John Doe",
+    jobTitle: "@web journalist",
+    institut: "formateur à MJEC",
+  },
+  {
+    id: 7,
+    image:
+      "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=2340&q=80",
+    name: "M. De-Mbou De-dieu",
+    jobTitle: "@fullstack developper",
+    institut: "formateur à MJEC",
+  },
+  {
+    id: 8,
+    image:
+      "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=986&q=80",
+    name: "@bm_dev",
+    jobTitle: "@fullstack mobile developper",
+    institut: "formateur à MJEC",
+  },
+  {
+    id: 9,
+    image:
+      "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
+    name: "Mme. Bienvenue Dorjos",
+    jobTitle: "@web developper",
+    institut: "formatrice à MJEC",
+  },
+  {
+    id: 10,
+    image:
+      "https://images.unsplash.com/photo-1556217477-d325251ece38?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=1020&q=80",
+    name: "M. John Doe",
+    jobTitle: "@entrepreunariat",
+    institut: "formateur à MJEC",
+  },
+];

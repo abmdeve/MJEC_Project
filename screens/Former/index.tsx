@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { View } from "react-native";
+import React from "react";
+import FormerCard from "../../components/FormerCard";
+import { FORMER } from "../../configs/data";
 
-const Former = () => {
+const Former = ({}) => {
   return (
-    <View>
-      <Text>Former</Text>
+    <View style={{ flex: 1 }}>
+      <FormerCard data={FORMER} onPress={(id) => console.log("id", id)} />
     </View>
-  )
-}
+  );
+};
 
-export default Former
-
-const styles = StyleSheet.create({})
+export default Former;
