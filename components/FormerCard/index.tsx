@@ -10,6 +10,7 @@ import {
 import React, { useRef } from "react";
 import Ripple from "react-native-material-ripple";
 import { FORMER } from "../../utils/interfaces";
+import Search from "../Search";
 
 export interface FormerCardProps {
   data: Array<FORMER>;
@@ -43,8 +44,11 @@ const FormerCard = ({ data, onPress }: FormerCardProps) => {
         keyExtractor={(item) => item.id.toString()}
         contentContainerStyle={{
           padding: SPACING,
-          marginTop: StatusBar.currentHeight || 42,
+          marginTop: StatusBar.currentHeight || 5,
         }}
+        // ListHeaderComponent={() => (
+        //   <Search value={value} onChange={setValue} keyboardType="name" />
+        // )}
         renderItem={({ item, index }) => {
           const inputRange = [
             -1,

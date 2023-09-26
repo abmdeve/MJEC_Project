@@ -5,6 +5,11 @@ import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
 import { COLORS } from "../../../configs/Colors";
 import { RootStackScreenProps } from "../../../routes/RootNavigator";
 
+const IMG =
+  "https://images.pexels.com/photos/1231265/pexels-photo-1231265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
+const SPACING = 20;
+const AVATAR_SIZE = 70;
+
 const SingleFormation = ({
   navigation,
   route,
@@ -27,6 +32,29 @@ const SingleFormation = ({
       />
       {/* <Text></Text> */}
       <View style={styles.details}>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            position: "relative",
+            bottom: "20%",
+            left: 10,
+          }}
+        >
+          <Image
+            source={{ uri: IMG }}
+            style={{
+              width: AVATAR_SIZE,
+              height: AVATAR_SIZE,
+              borderRadius: AVATAR_SIZE,
+              marginRight: SPACING / 2,
+            }}
+          />
+          <View>
+            <Text>NAME...</Text>
+            <Text>@FONCTION...</Text>
+          </View>
+        </View>
         <View style={styles.titleRow}>
           <Text style={styles.title}>TITLE...</Text>
           <View style={styles.priceWrapper}>
@@ -43,7 +71,11 @@ const SingleFormation = ({
             })}
             <Text style={styles.ratingText}> (4.9)</Text>
           </View>
-          
+
+          <View style={[styles.raing, {}]}>
+            <Text style={styles.ratingText}>duréé:</Text>
+            <Text style={[styles.ratingText, { marginLeft: 5 }]}>2 mois</Text>
+          </View>
         </View>
         {/* DESCRIPTION */}
         <View style={styles.descriptionWrapper}>
@@ -86,6 +118,7 @@ const styles = StyleSheet.create({
   image: {
     aspectRatio: 1,
     resizeMode: "cover",
+    opacity: .8
   },
   details: {
     marginTop: -50,
