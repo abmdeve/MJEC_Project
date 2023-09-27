@@ -11,7 +11,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import MasonryList from "reanimated-masonry-list";
 import { TabsStackScreenProps } from "../../routes/TabsNavigator";
-import { CATEGORIES_FORMATION, FORMATION, SLIDES } from "../../configs/data";
+import {
+  CAROUSEL,
+  CATEGORIES_FORMATION,
+  FORMATION,
+  SLIDES,
+} from "../../configs/data";
 import FormationCard from "../../components/FormationCard";
 import Card from "../../components/Card";
 import CardMansoryList from "../../components/FormationCard";
@@ -20,15 +25,14 @@ import Carousel from "../../components/Carousel";
 import CategoriesFormation from "../../components/CategoriesFormation";
 import Header from "../../components/Header";
 import { COLORS } from "../../configs/Colors";
+import CarouselCard from "../../components/CarouselCard";
 
 const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
   const [categoryIndex, setCategoryIndex] = useState(0);
   const width = Dimensions.get("window").width / 2;
   return (
     <View style={{ flex: 1, marginTop: 20 }}>
-      
       <SafeAreaView style={{ flex: 1 }} edges={["right", "left"]}>
-        
         {/* CAROUSEL COMPONENT */}
         <Text
           style={{
@@ -40,7 +44,8 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
         >
           News
         </Text>
-        <Carousel slides={SLIDES} />
+        <CarouselCard data={CAROUSEL} onPress={() => {}} />
+        {/* <Carousel slides={SLIDES} /> */}
         {/* <View style={{marginTop: 19}}/> */}
         {/* CATEGORIES COMPONENT */}
 
@@ -56,12 +61,12 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
           Formation
         </Text>
         <View style={{ marginBottom: 10 }}>
-        <CategoriesFormation
-          data={CATEGORIES_FORMATION}
-          categoryIndex={categoryIndex}
-          setCategoryIndex={setCategoryIndex}
-        />
-      </View>
+          <CategoriesFormation
+            data={CATEGORIES_FORMATION}
+            categoryIndex={categoryIndex}
+            setCategoryIndex={setCategoryIndex}
+          />
+        </View>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ marginTop: 10 }}

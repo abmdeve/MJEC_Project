@@ -5,11 +5,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Entypo } from "@expo/vector-icons";
 import { ABOUT } from "../../configs/data";
 import AboutCard from "../../components/AboutCard";
+import { TabsStackScreenProps } from "../../routes/TabsNavigator";
 
-const About = () => {
+const About = ({ navigation }: TabsStackScreenProps<"About">) => {
   return (
     <View style={{ flex: 1, padding: 20 }}>
-      <Text style={{fontSize: 21, fontWeight: "700"}}>Information</Text>
+      <Text style={{ fontSize: 21, fontWeight: "700" }}>Information</Text>
       <View
         style={{
           flexDirection: "row",
@@ -31,7 +32,12 @@ const About = () => {
           </Text>
         </View>
       </View>
-      <AboutCard data={ABOUT} onPress={(id) => console.log('id', id)} />
+      <AboutCard
+        data={ABOUT}
+        onPress={(id) => {
+          navigation.navigate("SingleAbout", { id: id });
+        }}
+      />
 
       <MapView style={styles.map} />
     </View>

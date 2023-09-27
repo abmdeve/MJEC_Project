@@ -8,18 +8,20 @@ import RootNavigator from "./routes/RootNavigator";
 
 export default function App() {
   return (
-    //  <GestureHandlerRootView>
-      <NavigationContainer>
-        <RootNavigator />
-      </NavigationContainer>
-    //  </GestureHandlerRootView>
+    <SafeAreaProvider>
+      <GestureHandlerRootView style={styles.container}>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
   );
 }
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    // justifyContent: "center",
+    // alignItems: "center",
   },
 });

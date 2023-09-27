@@ -6,10 +6,12 @@ import {
 } from "@react-navigation/native-stack";
 import TabsNavigator, { TabsStackParamList } from "./TabsNavigator";
 import SingleFormation from "../screens/Home/SingleFormation";
+import SingleAbout from "../screens/About/SingleAbout";
 
 export type RootStackParamList = {
   TabsStack: NativeStackScreenProps<TabsStackParamList>;
   SingleFormation: undefined;
+  SingleAbout: { id: number };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -26,6 +28,7 @@ const RootNavigator = () => {
     >
       <Stack.Screen name="TabsStack" component={TabsNavigator} />
       <Stack.Screen name="SingleFormation" component={SingleFormation} />
+      <Stack.Screen name="SingleAbout" component={SingleAbout} />
     </Stack.Navigator>
   );
 };
