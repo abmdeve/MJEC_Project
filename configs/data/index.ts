@@ -436,3 +436,38 @@ export const ABOUT = [
       "https://cloud.githubusercontent.com/assets/21040043/24240422/20d84f6c-0fe4-11e7-8f1d-9dbc594d0cfa.jpg",
   },
 ];
+
+export const SKILLS_DATA = [
+  {
+    id: 1,
+    name: "Web developper",
+  },
+  {
+    id: 2,
+    name: "Mobile developper",
+  },
+  {
+    id: 3,
+    name: "AWS developper",
+  },
+  {
+    id: 4,
+    name: "DevOps",
+  },
+  {
+    id: 5,
+    name: "Réseaux informatiques",
+  },
+  {
+    id: 6,
+    name: "Réseaux informatiques",
+  },
+  {
+    id: 7,
+    name: "Réseaux informatiques",
+  },
+  {
+    id: 8,
+    name: "Réseaux informatiques",
+  },
+]
