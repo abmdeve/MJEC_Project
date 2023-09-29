@@ -12,18 +12,20 @@ import { scale } from "../../utils/scale";
 
 export interface ServicesCardProps {
   data: Array<[]>;
+  onPress: (id: number) => void;
 }
-const ServicesCard = ({ data }: ServicesCardProps) => {
+const ServicesCard = ({ data, onPress }: ServicesCardProps) => {
   return (
     <View style={styles.container}>
       <FlatList
         showsVerticalScrollIndicator={false}
         data={data}
         numColumns={2}
-        contentContainerStyle={{ paddingBottom: getBottomSpace() + scale(16), }}
+        contentContainerStyle={{ paddingBottom: getBottomSpace() + scale(16) }}
         renderItem={({ item }) => {
           return (
             <Services
+              onPress={() => onPress(item.id)}
               title={item.title}
               subTitle={item.subTitle}
               categorie={item.categorie}

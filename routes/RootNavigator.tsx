@@ -8,12 +8,14 @@ import TabsNavigator, { TabsStackParamList } from "./TabsNavigator";
 import SingleFormation from "../screens/Home/SingleFormation";
 import SingleAbout from "../screens/About/SingleAbout";
 import SingleFormer from "../screens/Former/SingleFormer";
+import SingleServices from "../screens/Services/SingleServices";
 
 export type RootStackParamList = {
   TabsStack: NativeStackScreenProps<TabsStackParamList>;
   SingleFormation: undefined;
   SingleAbout: { id: number };
   SingleFormer: { id: number };
+  SingleServices: { id: number };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -32,6 +34,7 @@ const RootNavigator = () => {
       <Stack.Screen name="SingleFormation" component={SingleFormation} />
       <Stack.Screen name="SingleAbout" component={SingleAbout} />
       <Stack.Screen name="SingleFormer" component={SingleFormer} />
+      <Stack.Screen name="SingleServices" component={SingleServices} />
     </Stack.Navigator>
   );
 };
