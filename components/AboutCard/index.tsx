@@ -4,6 +4,11 @@ import Timeline from "react-native-timeline-flatlist";
 import Ripple from "react-native-material-ripple";
 import { ABOUT } from "../../utils/interfaces";
 
+// functions pour géner une image en fonction de son url soit uri
+const generatorSourceImage = (img: any) => {
+  return typeof img ==='string' ? {uri: img} : img;
+};
+
 export interface AboutCardProps {
   data: Array<ABOUT>;
   onPress: (id: number) => void;
@@ -14,6 +19,7 @@ const AVATAR_SIZE = 70;
 const AboutCard = ({ data, onPress }: AboutCardProps) => {
   return (
     <Timeline
+    style={{marginTop: 20}}
       data={data}
       circleSize={15}
       circleColor={"rgb(45,156,219)"}
@@ -30,7 +36,11 @@ const AboutCard = ({ data, onPress }: AboutCardProps) => {
             onPress={() => onPress(rowData.id)}
           >
             <Image
-              source={{ uri: rowData.imageUrl }}
+            // à remettre
+              // source={{ uri: rowData.imageUrl }}
+
+              // source={rowData.imageUrl}
+              source={generatorSourceImage(rowData.imageUrl)}
               style={{
                 width: AVATAR_SIZE,
                 height: AVATAR_SIZE,
@@ -67,4 +77,6 @@ const AboutCard = ({ data, onPress }: AboutCardProps) => {
 
 export default AboutCard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+
+});

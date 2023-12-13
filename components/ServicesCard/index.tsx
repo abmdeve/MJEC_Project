@@ -10,6 +10,7 @@ import Services from "./Services";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 import { scale } from "../../utils/scale";
 
+
 export interface ServicesCardProps {
   data: Array<[]>;
   onPress: (id: number) => void;
@@ -29,6 +30,7 @@ const ServicesCard = ({ data, onPress }: ServicesCardProps) => {
               title={item.title}
               subTitle={item.subTitle}
               categorie={item.categorie}
+              image={item.imgS}
             />
           );
         }}

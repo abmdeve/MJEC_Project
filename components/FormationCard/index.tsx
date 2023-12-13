@@ -126,6 +126,11 @@ import { useTheme } from "@react-navigation/native";
 import MasonryList from "reanimated-masonry-list";
 import Icons from "@expo/vector-icons/MaterialIcons";
 
+// la fonction vérifie si l'image est une url en ligne ou en local en asset
+const generatorSourceImage = (img: any) => {
+  return typeof img ==='string' ? {uri: img} : img;
+};
+
 const AVATAR_URL =
   "https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80";
 
@@ -192,7 +197,8 @@ const CardMansoryList = () => {
               }}
              >
               <Image
-                source={{ uri: item.imageUrl }}
+                // source={{ uri: item.imageUrl }}
+                source={generatorSourceImage(item.imageUrl)}
                 // source={{ uri: AVATAR_URL }}
                 resizeMode="cover"
                 style={StyleSheet.absoluteFill}

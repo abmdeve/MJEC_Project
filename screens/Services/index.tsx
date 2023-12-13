@@ -7,12 +7,13 @@ import ServicesCard from "../../components/ServicesCard";
 import Search from "../../components/Search";
 import { TabsStackScreenProps } from "../../routes/TabsNavigator";
 
+
 const Services = ({ navigation }: TabsStackScreenProps<"Services">) => {
   const [value, setValue] = useState("");
   return (
     <View style={{ flex: 1 }}>
       <SafeAreaView style={{ flex: 1 }} edges={["right", "left", "top"]}>
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Nos services</Text>
+        <Text style={{ fontSize: 20, fontWeight: "bold" , marginLeft: 20}}>Nos services</Text>
         {/* <Carousel slides={SLIDES} />  */}
         <Search value={value} onChange={setValue} keyboardType="name" />
         <ServicesCard

@@ -9,6 +9,7 @@ export const colors = {
   light: '#fbfbfb',
   white: '#fff',
   black: '#000',
+  bleu: '#0080FF',
 };
 
 export const shadow = {

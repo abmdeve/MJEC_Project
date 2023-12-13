@@ -11,13 +11,18 @@ import { useTheme } from "@react-navigation/native";
 import { BlurView } from "expo-blur";
 import { MaterialIcons } from "@expo/vector-icons";
 import Ripple from "react-native-material-ripple";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
+
+
+// card de la section formation setrouvant sur le screen formation 
 export interface CardProps {
   color?: string;
   width: number;
   aspectratio: number;
   title: string;
-  price: number;
+  // price: number;
+  desc: string;
   i: number;
   image: any;
   onPress: () => void;
@@ -27,7 +32,8 @@ const Card = ({
   width,
   aspectratio,
   title,
-  price,
+  // price,
+  desc,
   i,
   image,
   onPress,
@@ -70,8 +76,10 @@ const Card = ({
                 style={{
                   flex: 1,
                   fontSize: 16,
-                  fontWeight: "600",
+                  fontWeight: "900",
                   color: colors.text,
+                  // I added textAlign: "center" and I changed fontWeight 600 to 900
+                  textAlign: "center"
                 }}
               >
                 {title}
@@ -106,7 +114,7 @@ const Card = ({
               }}
               intensity={20}
             >
-              <Text
+              {/* <Text
                 style={{
                   flex: 1,
                   fontSize: 16,
@@ -116,11 +124,27 @@ const Card = ({
                 }}
               >
                 {price}XAF
+              </Text> */}
+              {/* J'ai ajouté le text en rétirant le prix commenté ci-dessus*/}
+              <Text
+                style={{
+                  flex: 1,
+                  fontSize: 16,
+                  fontWeight: "600",
+                  color: "#fff",
+                  marginLeft: 4,
+                  // textAlign: "center"
+                }}
+              >
+                {desc}
               </Text>
+
+              
               <TouchableOpacity
                 style={{
                   paddingHorizontal: 12,
-                  paddingVertical: 8,
+                  // I removed the paddingVertical from 8 to 0
+                  paddingVertical: 0,
                   borderRadius: 100,
                   backgroundColor: "#fff",
                 }}

@@ -28,8 +28,15 @@ import { COLORS } from "../../configs/Colors";
 import CarouselCard from "../../components/CarouselCard";
 
 const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
+
+  const SingleCarousel = (id:any) =>{
+
+    // I've added another link for going to arousel singler page I added in rootNavigator file the name of singleCarousel for creating the link between them
+    navigation.navigate('SingleCarousel',{id:id});
+  }
+
   const [categoryIndex, setCategoryIndex] = useState(0);
-  const width = Dimensions.get("window").width / 2;
+  const width = Dimensions.get("window").width / 2.1;
   return (
     <View style={{ flex: 1, marginTop: 20 }}>
       <SafeAreaView style={{ flex: 1 }} edges={["right", "left"]}>
@@ -42,9 +49,10 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
             marginBottom: 10,
           }}
         >
-          News
+          Actualités
         </Text>
-        <CarouselCard data={CAROUSEL} onPress={() => {}} />
+        {/*  onPress={() => SingleCarousel()} */}
+        <CarouselCard data={CAROUSEL} onPress={() =>SingleCarousel()} />
         {/* <Carousel slides={SLIDES} /> */}
         {/* <View style={{marginTop: 19}}/> */}
         {/* CATEGORIES COMPONENT */}
@@ -81,6 +89,8 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
                     image={item.image}
                     title={item.title}
                     price={item.price}
+                    // j'ai ajouté desc
+                    desc={item.desc}
                     key={item.id}
                     color={item.color}
                     aspectratio={item.aspectratio}
@@ -98,6 +108,8 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
                     image={item.image}
                     title={item.title}
                     price={item.price}
+                    // j'ai ajouté desc
+                    desc={item.desc}
                     key={item.id}
                     color={item.color}
                     aspectratio={item.aspectratio}

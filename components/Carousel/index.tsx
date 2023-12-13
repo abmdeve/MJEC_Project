@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     // alignItems: "center",
     width: "90%",
-    borderRadius: 15,
+    borderRadius: 50,
   },
   slide: {
     marginTop: 15,

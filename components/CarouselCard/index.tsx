@@ -3,6 +3,7 @@ import React from "react";
 import Carousel from "react-native-snap-carousel";
 import ItemCarousel from "./ItemCarousel";
 
+
 const { width, height } = Dimensions.get("window");
 
 export interface CarouselCardProps {
@@ -14,8 +15,8 @@ const CarouselCard = ({ data, onPress }: CarouselCardProps) => {
   return (
     <View>
       <Carousel
-      autoplay
-      layout="default"
+        autoplay
+        layout="default"
         data={data}
         firstItem={1}
         inactiveSlideOpacity={0.6}

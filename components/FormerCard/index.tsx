@@ -11,16 +11,27 @@ import React, { useRef } from "react";
 import Ripple from "react-native-material-ripple";
 import { FORMER } from "../../utils/interfaces";
 import Search from "../Search";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+
+
+// la fonction vérifie si l'image est une url en ligne ou en local en asset
+const generatorSourceImage = (img:any) => {
+  return typeof img ==='string' ? {uri: img} : img;
+};
+
+// const{width, height} = Dimensions.get('screen')
 
 export interface FormerCardProps {
   data: Array<FORMER>;
   onPress: (id: number) => void;
 }
 
+// Ecran formateur 
+
 const BG_IMG =
   "https://images.pexels.com/photos/1231265/pexels-photo-1231265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
 const SPACING = 20;
-const AVATAR_SIZE = 70;
+const AVATAR_SIZE = 80;
 const ITEM_SIZE = AVATAR_SIZE + SPACING * 3;
 
 const FormerCard = ({ data, onPress }: FormerCardProps) => {
@@ -32,6 +43,7 @@ const FormerCard = ({ data, onPress }: FormerCardProps) => {
       <Image
         source={{ uri: BG_IMG }}
         style={StyleSheet.absoluteFill}
+        // opacité du fond d'écran
         blurRadius={80}
       />
       <Animated.FlatList
@@ -94,7 +106,9 @@ const FormerCard = ({ data, onPress }: FormerCardProps) => {
                 }}
               >
                 <Image
-                  source={{ uri: item.image }}
+                  // source={{ uri: item.image }}
+                  // source={item.image}
+                  source={generatorSourceImage(item.image)}
                   style={{
                     width: AVATAR_SIZE,
                     height: AVATAR_SIZE,
@@ -107,16 +121,18 @@ const FormerCard = ({ data, onPress }: FormerCardProps) => {
                     numberOfLines={2}
                     style={{ fontSize: 22, fontWeight: "700" }}
                   >
-                    {item.name.length > 35
-                      ? item.name.substring(0, 35) + "..."
+                    {/* j'ai mis 18 à la place de 35 */}
+                    {item.name.length > wp(5)
+                      ? item.name.substring(0, wp(4.7)) + "..."
                       : item.name}
                   </Text>
                   <Text
                     numberOfLines={2}
                     style={{ fontSize: 18, opacity: 0.7 }}
                   >
-                    {item.jobTitle.length > 35
-                      ? item.jobTitle.substring(0, 35) + "..."
+                    {/* 35 wp */}
+                    {item.jobTitle.length > wp(5)
+                      ? item.jobTitle.substring(0, wp(5.5)) + "..."
                       : item.jobTitle}
                   </Text>
                   <Text

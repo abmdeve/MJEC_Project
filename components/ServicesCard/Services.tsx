@@ -5,10 +5,20 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Dimensions
 } from "react-native";
 import React from "react";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { COLORS } from "../../configs/Colors";
+// import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+
+
+// la fonction vérifie si l'image est une url en ligne ou en local en asset
+const generatorSourceImage = (img: any) => {
+  return typeof img ==='string' ? {uri: img} : img;
+};
+const width = Dimensions.get("window").width / 2.2;
+
 
 export interface ServicesProps {
   onPress?: () => void;
@@ -24,17 +34,18 @@ const Services = ({
   subTitle,
   categorie,
 }: ServicesProps) => {
+  // marginHorizontal I remove 23 and I put 12
   return (
+    
+    // 12 to 8
     <TouchableOpacity
       onPress={onPress}
-      style={{ marginHorizontal: 10, marginVertical: 10 }}
+      style={{ marginHorizontal: 8, marginVertical: 10 }}
     >
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image
-            source={{
-              uri: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
-            }}
+            source={generatorSourceImage(image)}
             //   source={{uri: image}}
             style={styles.image}
           />
@@ -67,17 +78,23 @@ export default Services;
 
 const styles = StyleSheet.create({
   container: {
-    width: 182,
-    height: 240,
-    marginEnd: 22,
-    borderRadius: 10,
+    // width 215 height 260
+    width: width,
+    height: 260,
+    // marginEnd: 22,
+    borderRadius: 20,
+    // borderTopRightRadius: 20,
     backgroundColor: COLORS.ligthBlueIcon,
   },
   imageContainer: {
     flex: 1,
-    width: 170,
-    marginLeft: 8,
-    marginTop: 8,
+    // width 215
+    width: width,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    // width: 170,
+    // marginLeft: 8,
+    // marginTop: 8,
     overflow: "hidden",
   },
   image: {
