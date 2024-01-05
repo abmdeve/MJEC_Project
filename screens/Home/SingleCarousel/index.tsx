@@ -7,6 +7,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { colors } from '../../../utils/constants';
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { COLORS } from '../../../configs/Colors';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 const generatorSourceImage = (img: any) => {
   return typeof img ==='string' ? {uri: img} : img;
@@ -17,7 +18,7 @@ const SingleCarousel = ({navigation} : RootStackScreenProps<"SingleCarousel">) =
     <View style={{flex: 1,}}>
       <Image
         source={{uri: "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=2340&q=80",}}
-        style={{width: 500, height: 500}}
+        style={{width: wp(100), height: 500}}
       />
       <StatusBar backgroundColor='white'/>
       <SafeAreaView style={{
@@ -56,7 +57,7 @@ const SingleCarousel = ({navigation} : RootStackScreenProps<"SingleCarousel">) =
         >
           <View style={{flexDirection: 'row',}}>
           
-            <Text style={{fontSize: 25, flex: 1, fontWeight: 'bold', marginLeft: 22}}>
+            <Text style={{fontSize: 25, flex: 2, fontWeight: 'bold', marginLeft: 22,}}>
               Event Description
             </Text>
             <Text style={{fontSize: 25, flex: 1, fontWeight: 'bold', textAlign: 'right', marginRight: 30, color: '#fb9002'}}>
@@ -66,7 +67,7 @@ const SingleCarousel = ({navigation} : RootStackScreenProps<"SingleCarousel">) =
           <Text style={{fontSize: 15, marginTop: 15, marginLeft: 5, marginRight: 9}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
           </Text>
-          <View style={{flexDirection: 'row', marginTop: 20, alignContent: 'space-between', marginHorizontal: 10}}>
+          <View style={{flexDirection: 'row', marginTop: 20, alignContent: 'space-between', marginHorizontal: 10, marginBottom: 20}}>
             <MaterialCommunityIcons
               name="clock"
               size={30}
@@ -86,7 +87,7 @@ const SingleCarousel = ({navigation} : RootStackScreenProps<"SingleCarousel">) =
               size={30}
               color={COLORS.darkRedIcon}
             />
-            <View style={{flex: 1, marginLeft: 10, justifyContent: 'flex-end', marginRight: -10}}>
+            <View style={{flex: 1, marginLeft: 10, justifyContent: 'flex-end', marginRight: -10, }}>
               <Text style={{fontWeight: 'bold', fontSize: 20,}}>
                 Adresse
               </Text>

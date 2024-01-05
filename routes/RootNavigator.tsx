@@ -10,7 +10,7 @@ import SingleAbout from "../screens/About/SingleAbout";
 import SingleFormer from "../screens/Former/SingleFormer";
 import SingleServices from "../screens/Services/SingleServices";
 import SingleCarousel from "../screens/Home/SingleCarousel";
-import SingleTrain from "../screens/Former/SingleFormer/SingleTrain/SingleTrain";
+import SingleTrain from "../screens/Former/SingleFormer/SingleTrain";
 
 export type RootStackParamList = {
   TabsStack: NativeStackScreenProps<TabsStackParamList>;

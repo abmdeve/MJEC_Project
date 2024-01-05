@@ -23,7 +23,8 @@ import {colors} from "../../../utils/constants"
 import { BlurView } from "expo-blur";
 import { useNavigation } from "@react-navigation/native";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
-import SingleTrain from "./SingleTrain/SingleTrain"
+import SingleTrain from "./SingleTrain";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const{width, height} = Dimensions.get('screen')
 
@@ -79,186 +80,215 @@ const SingleFormer = ({ navigation }: RootStackScreenProps<"SingleFormer">) => {
     <View style={{ flex: 1 }}>
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar/>
-        {/* instead of "100%" I put wp(100) */}
-        <View style={{ width: wp(100) }}>
-          <Image
-            // source={{
-            //   uri: "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=2340&q=80",
-            // }}
-            source={require('../../../assets/images/Mme_KOUNDA.jpg')}
-            resizeMode="cover"
-            style={{
-              // instead of 200 I use hp(25)
-              height: hp(25),
-              // instead of "100%" I use wp(100)
-              width: wp(100),
-            }}
-          />
-          <View
-            style={{
-              position: "absolute",
-              flexDirection: "row",
-              alignItems: "center",
-              padding: 20,
-              gap: 8,
-            }}
-          >
-            <TouchableOpacity
+          {/* instead of "100%" I put wp(100) */}
+          <View style={{ width: wp(100) }}>
+            <Image
+              // source={{
+              //   uri: "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=2340&q=80",
+              // }}
+              source={require('../../../assets/images/Mme_KOUNDA.jpg')}
+              resizeMode="cover"
               style={{
-                // instead of 50 I use wp(10)
-                width: wp(10),
-                aspectRatio: 1,
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: 52,
-                borderWidth: 1,
-                borderColor: "#fff",
+                // instead of 200 I use hp(25)
+                height: hp(25),
+                // instead of "100%" I use wp(100)
+                width: wp(100),
               }}
-              onPress={() => navigation.goBack()}
+            />
+            <View
+              style={{
+                position: "absolute",
+                flexDirection: "row",
+                alignItems: "center",
+                padding: 20,
+                gap: 8,
+              }}
             >
-              <MaterialIcons name="arrow-back" size={24} color={"#fff"} />
-            </TouchableOpacity>
-            {/* <View style={{ flex: 1 }} /> */}
-          </View>
-        </View>
-
-        <View style={{ alignItems: "center" }}>
-          <Image
-            // source={{
-            //   uri: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
-            // }}
-            source={require('../../../assets/images/Mme_Stercia.jpg')}
-            resizeMode="cover"
-            style={{
-              width: 155,
-              height: 155,
-              borderRadius: 999,
-              borderColor: COLORS.white,
-              borderWidth: 2,
-              marginTop: -90,
-              marginBottom: 5,
-            }}
-          />
-          {/* Teacher name */}
-          <Text style={{fontWeight: '700'}}>Stercia KOUNDA</Text>
-          <Text style={{ color: COLORS.darkBlueIcon }}>
-            @fullstack Developer
-          </Text>
-        </View>
-
-        <View style={{ marginHorizontal: 10 }}>
-          <Text
-            style={{
-              marginBottom: 5,
-              fontSize: 18,
-              fontWeight: "bold",
-              opacity: 0.7,
-            }}
-          >
-            Parcours
-          </Text>
-          <Text style={{ fontSize: 15, opacity: 0.7 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            ultrices, justo nec fringilla posuere, nunc arcu scelerisque massa,
-            eget euismod tortor justo ac urna. Nullam rhoncus urna id dapibus
-            malesuada. Sed bibendum feugiat odio, in suscipit ipsum lacinia eu.
-            Proin condimentum vestibulum tellus, in efficitur justo tincidunt
-            et. Nullam varius libero vel massa venenatis, vel egestas metus
-            varius.
-          </Text>
-          <Text
-            style={{
-              marginVertical: 5,
-              fontSize: 18,
-              fontWeight: "bold",
-              opacity: 0.7,
-            }}
-          >
-            Compétences
-          </Text>
-          <ScrollView
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={{ marginBottom: 0 }}
-          >
-            {/* {SKILLS_DATA.map((item) => {
-              return <Skills key={item.id} name={item.name} />;
-            })} */}
-            {showMore ? (
-              <View>
-                  {SKILLS_DATA.map((item) => {
-              return (
-                <Skills key={item.id} name={item.name} />
-              );
-            })}
-              </View>
-            ):(
-              <View>
-                {SKILLS_DATA.map((item) => {
-              return (
-                <Skills key={item.id} name={item.name} />
-              );
-            })}
-              {more.map((item)=>{
-                return (
-                <Skills key={item.id} name={item.name} />
-
-                )
-              } )}
-              </View>
-            )}
-            <View>
-              <TouchableOpacity onPress={() => setShowMore(!showMore)}>
-                  <Text style={{color: colors.bleu,}}>{showMore ? 'Voir plus' : 'Voir moins'}</Text>
+              <TouchableOpacity
+                style={{
+                  // instead of 50 I use wp(10)
+                  width: wp(10),
+                  aspectRatio: 1,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 52,
+                  borderWidth: 1,
+                  borderColor: "#fff",
+                }}
+                onPress={() => navigation.goBack()}
+              >
+                <MaterialIcons name="arrow-back" size={24} color={"#fff"} />
               </TouchableOpacity>
+              {/* <View style={{ flex: 1 }} /> */}
+            </View>
+          </View>
+
+            <View style={{ alignItems: "center" }}>
+              <Image
+                // source={{
+                //   uri: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
+                // }}
+                source={require('../../../assets/images/Mme_Stercia.jpg')}
+                resizeMode="cover"
+                style={{
+                  width: 155,
+                  height: 155,
+                  borderRadius: 999,
+                  borderColor: COLORS.white,
+                  borderWidth: 2,
+                  marginTop: -90,
+                  marginBottom: 5,
+                }}
+              />
+              {/* Teacher name */}
+              <Text style={{fontWeight: '700'}}>Stercia KOUNDA</Text>
+              <Text style={{ color: COLORS.darkBlueIcon }}>
+                @fullstack Developer
+              </Text>
+            </View>
+          <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={{ marginHorizontal: 10 }}>
+              <Text
+                style={{
+                  marginBottom: 5,
+                  fontSize: 18,
+                  fontWeight: "bold",
+                  opacity: 0.7,
+                }}
+              >
+                Parcours
+              </Text>
+              <Text style={{ fontSize: 15, opacity: 0.7 }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                ultrices, justo nec fringilla posuere, nunc arcu scelerisque massa,
+                eget euismod tortor justo ac urna. Nullam rhoncus urna id dapibus
+                malesuada. Sed bibendum feugiat odio, in suscipit ipsum lacinia eu.
+                Proin condimentum vestibulum tellus, in efficitur justo tincidunt
+                et. Nullam varius libero vel massa venenatis, vel egestas metus
+                varius.
+              </Text>
+              <Text
+                style={{
+                  marginVertical: 5,
+                  fontSize: 18,
+                  fontWeight: "bold",
+                  opacity: 0.7,
+                }}
+              >
+                Compétences
+              </Text>
+              <ScrollView
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ marginBottom: 0 }}
+              >
+                {/* {SKILLS_DATA.map((item) => {
+                  return <Skills key={item.id} name={item.name} />;
+                })} */}
+                {showMore ? (
+                  <View>
+                      {SKILLS_DATA.map((item) => {
+                  return (
+                    <Skills key={item.id} name={item.name} />
+                  );
+                })}
+                  </View>
+                ):(
+                  <View>
+                    {SKILLS_DATA.map((item) => {
+                  return (
+                    <Skills key={item.id} name={item.name} />
+                  );
+                })}
+                  {more.map((item)=>{
+                    return (
+                    <Skills key={item.id} name={item.name} />
+
+                    )
+                  } )}
+                  </View>
+                )}
+                <View>
+                  <TouchableOpacity onPress={() => setShowMore(!showMore)}>
+                      <Text style={{color: colors.bleu,}}>{showMore ? 'Voir plus' : 'Voir moins'}</Text>
+                  </TouchableOpacity>
+                </View>
+              </ScrollView>
+              {/* Formation giving */}
+              <View>
+                <Text style={{
+                  fontSize: 18,
+                  fontWeight: "bold",
+                  opacity: 0.7,}}>
+                    Formations
+                  </Text>
+                  <ScrollView horizontal showsHorizontalScrollIndicator={false} bounces={false}>
+                      {formation_giving.map((item) => {
+                        return (
+                          <TouchableOpacity onPress={() => navigation.navigate("SingleTrain")}>
+                            <View style={{width: size, marginRight: 10}} key={item.id}>
+                              <View style={styles.imageContainer}>
+                                  {/* <Image source={item.imageUrl} style={styles.image}/> */}
+                                  <ImageBackground source={generatorSourceImage(item.imageUrl)} style={styles.image}>
+
+                                    <View style={[StyleSheet.absoluteFill, { padding: 10 }]}>
+                                      <View style={{flexDirection: "row", gap: 8, padding: 4, alignItems: "center",}}>
+                                        <Text style={{flex: 1, fontSize: 16, fontWeight: "900", color: colors.black, textAlign: "center"}}>
+                                          {item.title}
+                                        </Text>
+                                      </View>
+                                      {/* BLUR EFFET */}
+                                      <View style={{ flex: 1 }} />
+                                      {/* intensity 20 or 10 to 0 */}
+                                      <BlurView style={{ flexDirection: "row", backgroundColor: "rgba(0,0,0,0.35)", alignItems: "center", padding: 5, borderRadius: 100, overflow: "hidden",}} intensity={0}>
+                                        <Text style={{ flex: 1, fontSize: 16, fontWeight: "600", color: "#fff", marginLeft: 4,}}>
+                                          {item.title}
+                                        </Text>
+                                      
+                                        <TouchableOpacity style={{paddingHorizontal: 12, paddingVertical: 0, borderRadius: 100, backgroundColor: "#fff",}}>
+                                          <MaterialIcons name="arrow-forward" color={"#000"} size={15} />
+                                        </TouchableOpacity>
+                                      </BlurView>
+                                    </View>
+                                  </ImageBackground>
+                              </View>
+                            </View>
+                          </TouchableOpacity>
+                          
+                        )
+                      })}
+                    </ScrollView>  
+              </View>
+            </View>
+            <View style={{marginTop: 20,marginLeft: 10,}}>
+              <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 20}}>Contact</Text>
+              <View>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="facebook" size={70} color={COLORS.darkBlueIcon} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="instagram" size={70} color={COLORS.darkRedIcon} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="linkedin" size={70} color={COLORS.darkBlueIcon} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="github" size={70} color={COLORS.dark} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="twitter" size={70} color={COLORS.darkBlueIcon} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="linkedin" size={70} color={COLORS.darkBlueIcon} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="gmail" size={70} color={COLORS.mail} />
+                        {/* <Ionicons name="logo-facebook" size={70}></Ionicons> */}
+                    </TouchableOpacity>
+                </ScrollView>
+              </View>
             </View>
           </ScrollView>
-          {/* Formation giving */}
-          <View>
-            <Text style={{
-              fontSize: 18,
-              fontWeight: "bold",
-              opacity: 0.7,}}>
-                Formations
-              </Text>
-               <ScrollView horizontal showsHorizontalScrollIndicator={false} bounces={false}>
-                  {formation_giving.map((item) => {
-                    return (
-                      <TouchableOpacity onPress={() => navigation.navigate("SingleTrain")}>
-                        <View style={{width: size, marginRight: 10}} key={item.id}>
-                          <View style={styles.imageContainer}>
-                              {/* <Image source={item.imageUrl} style={styles.image}/> */}
-                              <ImageBackground source={generatorSourceImage(item.imageUrl)} style={styles.image}>
-
-                                <View style={[StyleSheet.absoluteFill, { padding: 10 }]}>
-                                  <View style={{flexDirection: "row", gap: 8, padding: 4, alignItems: "center",}}>
-                                    <Text style={{flex: 1, fontSize: 16, fontWeight: "900", color: colors.black, textAlign: "center"}}>
-                                      {item.title}
-                                    </Text>
-                                  </View>
-                                  {/* BLUR EFFET */}
-                                  <View style={{ flex: 1 }} />
-                                  {/* intensity 20 or 10 to 0 */}
-                                  <BlurView style={{ flexDirection: "row", backgroundColor: "rgba(0,0,0,0.35)", alignItems: "center", padding: 5, borderRadius: 100, overflow: "hidden",}} intensity={0}>
-                                    <Text style={{ flex: 1, fontSize: 16, fontWeight: "600", color: "#fff", marginLeft: 4,}}>
-                                      {item.title}
-                                    </Text>
-                                  
-                                    <TouchableOpacity style={{paddingHorizontal: 12, paddingVertical: 0, borderRadius: 100, backgroundColor: "#fff",}}>
-                                      <MaterialIcons name="arrow-forward" color={"#000"} size={15} />
-                                    </TouchableOpacity>
-                                  </BlurView>
-                                </View>
-                              </ImageBackground>
-                          </View>
-                        </View>
-                      </TouchableOpacity>
-                      
-                    )
-                  })}
-                </ScrollView>
-              
-          </View>
-        </View>
       </SafeAreaView>
     </View>
   );

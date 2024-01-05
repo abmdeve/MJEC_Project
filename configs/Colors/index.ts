@@ -4,6 +4,7 @@ export const COLORS = {
   yellow: "yellow",
   green: "green",
   white: "#fff",
+  dark: "#000",
   ligthOrangeIcon: "#FCDAC2",
   darkOrangeIcon: "#FEA31C",
   ligthBlueIcon: "#DBE9FD",
@@ -19,5 +20,7 @@ export const COLORS = {
   lightCurrentIcon: "#FEF1DE",
   darkCurrentIcon: "#FDD888",
   textCurrent: "#64727E",
+  mail: "#db4a39",
+
 
 };
