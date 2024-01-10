@@ -259,35 +259,7 @@ const SingleFormer = ({ navigation }: RootStackScreenProps<"SingleFormer">) => {
                     </ScrollView>  
               </View>
             </View>
-            <View style={{marginTop: 20,marginLeft: 10,}}>
-              <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 20}}>Contact</Text>
-              <View>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons name="facebook" size={70} color={COLORS.darkBlueIcon} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons name="instagram" size={70} color={COLORS.darkRedIcon} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons name="linkedin" size={70} color={COLORS.darkBlueIcon} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons name="github" size={70} color={COLORS.dark} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons name="twitter" size={70} color={COLORS.darkBlueIcon} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons name="linkedin" size={70} color={COLORS.darkBlueIcon} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <MaterialCommunityIcons name="gmail" size={70} color={COLORS.mail} />
-                        {/* <Ionicons name="logo-facebook" size={70}></Ionicons> */}
-                    </TouchableOpacity>
-                </ScrollView>
-              </View>
-            </View>
+
           </ScrollView>
       </SafeAreaView>
     </View>

@@ -64,7 +64,7 @@ const SingleCarousel = ({navigation} : RootStackScreenProps<"SingleCarousel">) =
               5 000
             </Text>
           </View>
-          <Text style={{fontSize: 15, marginTop: 15, marginLeft: 5, marginRight: 9}}>
+          <Text style={{fontSize: 15, marginTop: 15, marginLeft: 18, marginRight: 9}}>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
           </Text>
           <View style={{flexDirection: 'row', marginTop: 20, alignContent: 'space-between', marginHorizontal: 10, marginBottom: 20}}>

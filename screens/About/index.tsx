@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View, ImageBackground } from "react-native";
+import { Image, StyleSheet, Text, View, ImageBackground, ScrollView } from "react-native";
 import React, { useState } from "react";
 import MapView from "react-native-maps";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -10,6 +10,8 @@ import LinearGradient from "react-native-linear-gradient";
 import { colors } from "../../utils/constants";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { COLORS } from "../../configs/Colors";
 
 
 const imageURL = require('../../assets/images/IMG_0965.jpg');
@@ -23,9 +25,24 @@ const About = ({ navigation }: TabsStackScreenProps<"About">) => {
 const [showmore, setShowmore] = useState(false);
 
   return (
-    <View style={{ flex: 1, paddingTop: 20 }}>
+    <View style={{ flex: 1, paddingTop: 10 }}>
       {/* I chanhed Information by A propos de MJEC and I added paddingLeft*/}
-      <Text style={{ fontSize: 21, fontWeight: "700", paddingLeft: 20}}>A Propos de MJEC</Text>
+      <View style={{flexDirection:'row', justifyContent: 'space-between'}}>
+      <Text style={{ fontSize: 21, fontWeight: "700", paddingLeft: 10}}>A Propos de MJEC</Text>
+              <View style={{flexDirection: 'row',marginRight: 10}}>
+                
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="facebook" size={40} color={COLORS.darkBlueIcon} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="instagram" size={40} color={COLORS.darkRedIcon} />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <MaterialCommunityIcons name="linkedin" size={40} color={COLORS.darkBlueIcon} />
+                    </TouchableOpacity>
+              </View>
+      </View>
+      
       <View
         style={{
           flexDirection: "row",
@@ -37,14 +54,14 @@ const [showmore, setShowmore] = useState(false);
       >
         {/* I added paddingLeft */}
         <View style={{ flexDirection: "row", alignItems: "center", paddingLeft: 5}}>
-          <Entypo name="location" size={24} color="rgb(45,156,219)" />
-          <Text>
-            Qartier: <Text style={{ fontWeight: "bold" }}>Mpaka 120</Text>
+          {/* <Entypo name="location" size={24} color="rgb(45,156,219)" /> */}
+          <Text style={{ fontWeight: "bold" }}>
+            Quartier: <Text style={{fontWeight: '400'}}>Mpaka 120</Text>
           </Text>
         </View>
         <View>
-          <Text>
-            Tel: <Text style={{ fontWeight: "bold" }}>+242 06 600 06 06</Text>{" "}
+          <Text style={{ fontWeight: "bold" }}>
+            Tel: <Text style={{ fontWeight: "400" }}>+242 06 600 06 06</Text>{" "}
           </Text>
         </View>
       </View>
