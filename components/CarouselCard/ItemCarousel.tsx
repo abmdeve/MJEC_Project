@@ -35,4 +35,4 @@ const ItemCarousel = ({ image, onPress }: ItemCarouselProps) => {
 
 export default ItemCarousel;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

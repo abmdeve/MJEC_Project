@@ -7,8 +7,10 @@ import ItemCarousel from "./ItemCarousel";
 const { width, height } = Dimensions.get("window");
 
 export interface CarouselCardProps {
-  data: Array<[]>;
-  onPress: () => void;
+  // data: Array<[]>;
+  data:{id:number, image:string; icon?: string;}[] // définir le type correct des données
+  // onPress: () => void;
+  onPress: (id:number) => void;
 }
 
 const CarouselCard = ({ data, onPress }: CarouselCardProps) => {
@@ -26,7 +28,8 @@ const CarouselCard = ({ data, onPress }: CarouselCardProps) => {
         // itemWidth={400} 
         slideStyle={{ display: "flex", alignItems: "center", height: 200 }}
         renderItem={({ item }) => (
-          <ItemCarousel image={item.image} onPress={onPress} />
+          //  j'ai retiré onPress={onPress} 
+          <ItemCarousel image={item.image} onPress={()=> onPress(item.id)} />
         )}
       />
     </View>
@@ -35,4 +38,4 @@ const CarouselCard = ({ data, onPress }: CarouselCardProps) => {
 
 export default CarouselCard;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

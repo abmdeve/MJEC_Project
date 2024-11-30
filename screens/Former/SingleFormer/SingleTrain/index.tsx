@@ -95,7 +95,6 @@ const SingleTrain = ({navigation} : RootStackScreenProps<"SingleTrain">) => {
             </View>
 
           </View> */}
-          
         </ScrollView>
 
       </View>

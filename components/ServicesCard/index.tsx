@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   View,
   FlatList,
+  ImageSourcePropType
 } from "react-native";
 import React from "react";
 import Services from "./Services";
@@ -12,13 +13,16 @@ import { scale } from "../../utils/scale";
 
 
 export interface ServicesCardProps {
-  data: Array<[]>;
+  // data: Array<[]>;
+  // j'ai remplacé image?: ImageSourcePropType par image?: string
+  data: {id: number, image: string, title: string, subTitle: string; categorie: string;}[];
   onPress: (id: number) => void;
 }
 const ServicesCard = ({ data, onPress }: ServicesCardProps) => {
   return (
     <View style={styles.container}>
       <FlatList
+      keyExtractor={(item) => item.id.toString()}
         showsVerticalScrollIndicator={false}
         data={data}
         numColumns={2}
@@ -30,7 +34,7 @@ const ServicesCard = ({ data, onPress }: ServicesCardProps) => {
               title={item.title}
               subTitle={item.subTitle}
               categorie={item.categorie}
-              image={item.imgS}
+              image={item.image}
             />
           );
         }}

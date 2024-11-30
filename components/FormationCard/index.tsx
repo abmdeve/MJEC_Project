@@ -126,6 +126,15 @@ import { useTheme } from "@react-navigation/native";
 import MasonryList from "reanimated-masonry-list";
 import Icons from "@expo/vector-icons/MaterialIcons";
 
+
+// Définissez l'interface au début du fichier
+interface Item {
+  id: number; // Identifiant unique
+  imageUrl: string; // URL de l'image
+  title: string; // Titre de l'élément
+  price: number; // Prix de l'élément
+}
+
 // la fonction vérifie si l'image est une url en ligne ou en local en asset
 const generatorSourceImage = (img: any) => {
   return typeof img ==='string' ? {uri: img} : img;
@@ -134,38 +143,44 @@ const generatorSourceImage = (img: any) => {
 const AVATAR_URL =
   "https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80";
 
-const MESONARY_LIST_DATA = [
+const MESONARY_LIST_DATA: Item[] = [
   {
+    id: 1,
     imageUrl:
       "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=2340&q=80",
     title: "PUMA Everyday Hustle",
     price: 160,
   },
   {
+    id: 2,
     imageUrl:
       "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=986&q=80",
     title: "PUMA Everyday Hustle",
     price: 160,
   },
   {
+    id: 3,
     imageUrl:
       "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
     title: "PUMA Everyday Hustle",
     price: 180,
   },
   {
+    id: 4,
     imageUrl:
       "https://images.unsplash.com/photo-1556217477-d325251ece38?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=1020&q=80",
     title: "PUMA Everyday Hustle",
     price: 200,
   },
   {
+    id: 5,
     imageUrl:
       "https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
     title: "PUMA Everyday Hustle",
     price: 180,
   },
   {
+    id: 6,
     imageUrl:
       "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
     title: "PUMA Everyday Hustle",
@@ -179,12 +194,12 @@ const CardMansoryList = () => {
   return (
     <MasonryList
       data={MESONARY_LIST_DATA}
-      // data={[1, 2, 3, 454, 4, 56, 44]}
-      keyExtractor={(item): string => item.price}
+
+      keyExtractor={(item) => item.id.toString()}
       numColumns={2}
       contentContainerStyle={{ paddingHorizontal: 12 }}
       showsVerticalScrollIndicator={false}
-      renderItem={({ item, i }) => {
+      renderItem={({ item, i }:{item: Item; i:number}) => {
         return (
           <View style={{ padding: 6 }}>
             <View
@@ -287,5 +302,5 @@ const CardMansoryList = () => {
 
 export default CardMansoryList;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});
 

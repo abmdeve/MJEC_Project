@@ -27,4 +27,4 @@ const Services = ({ navigation }: TabsStackScreenProps<"Services">) => {
 
 export default Services;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

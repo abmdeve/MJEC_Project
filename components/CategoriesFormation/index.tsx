@@ -9,7 +9,8 @@ import React, { SetStateAction, Dispatch } from "react";
 import { useTheme } from "@react-navigation/native";
 
 export interface CategoriesFormationProps {
-  data: Array<[]>;
+  // data: Array<[]>;
+  data: { id: number; title: string }[] // accepte une liste des objects  avec un id et title
   categoryIndex: number;
   setCategoryIndex: Dispatch<SetStateAction<number>>;
 }
@@ -62,4 +63,4 @@ const CategoriesFormation = ({
 
 export default CategoriesFormation;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

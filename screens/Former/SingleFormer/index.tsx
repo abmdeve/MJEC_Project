@@ -128,7 +128,7 @@ const SingleFormer = ({ navigation }: RootStackScreenProps<"SingleFormer">) => {
                 // source={{
                 //   uri: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80",
                 // }}
-                source={require('../../../assets/images/Mme_Stercia.jpg')}
+                source={require('../../../assets/images/Mme_KOUNDA.jpg')}
                 resizeMode="cover"
                 style={{
                   width: 155,
@@ -224,7 +224,7 @@ const SingleFormer = ({ navigation }: RootStackScreenProps<"SingleFormer">) => {
                   <ScrollView horizontal showsHorizontalScrollIndicator={false} bounces={false}>
                       {formation_giving.map((item) => {
                         return (
-                          <TouchableOpacity onPress={() => navigation.navigate("SingleTrain")}>
+                          <TouchableOpacity onPress={() => navigation.navigate({key:"SingleTrain"})}>
                             <View style={{width: size, marginRight: 10}} key={item.id}>
                               <View style={styles.imageContainer}>
                                   {/* <Image source={item.imageUrl} style={styles.image}/> */}
@@ -243,7 +243,6 @@ const SingleFormer = ({ navigation }: RootStackScreenProps<"SingleFormer">) => {
                                         <Text style={{ flex: 1, fontSize: 16, fontWeight: "600", color: "#fff", marginLeft: 4,}}>
                                           {item.title}
                                         </Text>
-                                      
                                         <TouchableOpacity style={{paddingHorizontal: 12, paddingVertical: 0, borderRadius: 100, backgroundColor: "#fff",}}>
                                           <MaterialIcons name="arrow-forward" color={"#000"} size={15} />
                                         </TouchableOpacity>
@@ -253,10 +252,9 @@ const SingleFormer = ({ navigation }: RootStackScreenProps<"SingleFormer">) => {
                               </View>
                             </View>
                           </TouchableOpacity>
-                          
                         )
                       })}
-                    </ScrollView>  
+                    </ScrollView>
               </View>
             </View>
 

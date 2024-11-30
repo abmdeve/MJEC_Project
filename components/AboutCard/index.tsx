@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import {Text, View, Image } from "react-native";
 import React from "react";
 import Timeline from "react-native-timeline-flatlist";
 import Ripple from "react-native-material-ripple";
@@ -77,6 +77,4 @@ const AboutCard = ({ data, onPress }: AboutCardProps) => {
 
 export default AboutCard;
 
-const styles = StyleSheet.create({
-
-});
+// const styles = StyleSheet.create({});

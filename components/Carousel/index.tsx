@@ -3,10 +3,12 @@ import React from "react";
 import { SliderBox } from "react-native-image-slider-box";
 import { COLORS } from "../../configs/Colors";
 
+// export interface CarouselProps {
+//   // slides: Array<[]>;
+// }
 export interface CarouselProps {
-  slides: Array<[]>;
+  slides: string[];  // Un tableau de chaînes de caractères représentant les URL d'images
 }
-
 const Carousel = ({ slides }: CarouselProps) => {
   return (
     <View style={styles.container}>

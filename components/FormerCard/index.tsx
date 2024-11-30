@@ -153,4 +153,4 @@ const FormerCard = ({ data, onPress }: FormerCardProps) => {
 
 export default FormerCard;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

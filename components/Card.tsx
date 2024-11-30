@@ -161,4 +161,4 @@ const Card = ({
 
 export default Card;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

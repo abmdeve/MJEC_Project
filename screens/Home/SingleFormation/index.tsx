@@ -10,7 +10,7 @@ import { colors } from "../../../utils/constants";
 // Teacher profile avatar url egal const IMG
 // je remplace par l'image de Mr De-dieu
 // const IMG ="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80";
-const IMG = require('../../../assets/images/Mr_Dedieu.jpg')
+const IMG = require('../../../assets/images/Mr_MANTS.jpg')
 const SPACING = 20;
 const AVATAR_SIZE = 70;
 
@@ -34,12 +34,10 @@ const SingleFormation = ({
           uri: "https://www.codeur.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbFFDIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--70ec18e52930fb2375f4710b904138814dd41a11/ios.jpg",
         }}
         style={styles.image}
-        
       />
-      
       {/* <Text></Text> */}
       <View style={styles.details}>
-        <TouchableOpacity onPress={() => navigation.navigate("SingleFormer")}>
+        <TouchableOpacity onPress={() => navigation.navigate({key:"SingleFormer"})}>
           <View
             style={{
               flexDirection: "row",
@@ -66,7 +64,6 @@ const SingleFormation = ({
             </View>
           </View>
         </TouchableOpacity>
-        
         <View style={styles.titleRow}>
           <Text style={styles.title}>Titre : Développement Mobile</Text>
           <View style={styles.priceWrapper}>
@@ -109,7 +106,6 @@ const SingleFormation = ({
         <View>
         <Text style={{marginLeft: 10, fontWeight: '600'}}>PREREQUIS...</Text>
           <View>
-            
           </View>
         </View>
       </View>

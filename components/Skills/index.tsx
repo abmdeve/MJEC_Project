@@ -29,4 +29,4 @@ const Skills = ({ name }: SkillsProps) => {
 
 export default Skills;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

@@ -29,7 +29,8 @@ import CarouselCard from "../../components/CarouselCard";
 
 const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
 
-  const SingleCarousel = (id:any) =>{
+  // j'ai retiré id:any pour mettre id:number 
+  const SingleCarousel = (id:number) =>{
 
     // I've added another link for going to arousel singler page I added in rootNavigator file the name of singleCarousel for creating the link between them
     navigation.navigate('SingleCarousel',{id:id});
@@ -52,7 +53,7 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
           Actualités
         </Text>
         {/*  onPress={() => SingleCarousel()} */}
-        <CarouselCard data={CAROUSEL} onPress={() =>SingleCarousel()} />
+        <CarouselCard data={CAROUSEL} onPress={(id) =>SingleCarousel(id)} />
         {/* <Carousel slides={SLIDES} /> */}
         {/* <View style={{marginTop: 19}}/> */}
         {/* CATEGORIES COMPONENT */}
@@ -88,7 +89,7 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
                     i={index}
                     image={item.image}
                     title={item.title}
-                    price={item.price}
+                    // price={item.price || "Prix non disponible"}
                     // j'ai ajouté desc
                     desc={item.desc}
                     key={item.id}
@@ -107,7 +108,7 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
                     i={index}
                     image={item.image}
                     title={item.title}
-                    price={item.price}
+                    // price={item.price || "Prix non disponible"}
                     // j'ai ajouté desc
                     desc={item.desc}
                     key={item.id}
@@ -173,4 +174,4 @@ const Home = ({ navigation }: TabsStackScreenProps<"Home">) => {
 
 export default Home;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

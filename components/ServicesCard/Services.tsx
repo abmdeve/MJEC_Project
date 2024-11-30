@@ -21,8 +21,9 @@ const width = Dimensions.get("window").width / 2.2;
 
 
 export interface ServicesProps {
+  // j'ai remplacé image?: ImageSourcePropType par image?: string
   onPress?: () => void;
-  image?: ImageSourcePropType;
+  image?: string;
   title: string;
   subTitle: string;
   categorie: string;

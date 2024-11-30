@@ -279,70 +279,70 @@ export const SERVICES = [
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 2,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 3,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 4,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 5,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 6,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 7,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 8,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 9,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
   {
     id: 10,
     title: "Evénement",
     subTitle: "Organisation event",
     categorie: "Evenementiel",
-    imgS: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
+    image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=MnwxMjA3fD8MHxwaG90by1wYwdlfHx8fGVufDB8fH&auto=format&fit=crop&w=987&q=80"
   },
 ];
 
@@ -355,7 +355,7 @@ export const FORMER = [
     name: "Mr. De-Mbou De-dieu",
     jobTitle: "@fullstack developper",
     institut: "Formateur à MJEC",
-    image: require('../../assets/images/Mr_Dedieu.jpg')
+    image: require('../../assets/images/Mr_Deric.jpg')
   },
   {
     id: 2,
@@ -364,7 +364,7 @@ export const FORMER = [
     name: "Mme. Dorjoline MATONDO",
     jobTitle: "@fullstack developper",
     institut: "Formatrice à MJEC",
-    image: require('../../assets/images/Mme_MATONDO.jpg')
+    image: require('../../assets/images/Mme_KOUNDA.jpg')
 
   },
   {
@@ -374,7 +374,7 @@ export const FORMER = [
     name: "Mme. Leatictia MOUKAVELIE",
     jobTitle: "@Outil Bureautique",
     institut: "formatrice à MJEC",
-    image: require('../../assets/images/Mme_MOUKAVELIE.jpg')
+    image: require('../../assets/images/Mme_KOUNDA.jpg')
   },
   {
     id: 4,
@@ -466,7 +466,7 @@ export const ABOUT = [
     description: "",
     // imageUrl:
     //   "https://cloud.githubusercontent.com/assets/21040043/24240419/1f553dee-0fe4-11e7-8638-6025682232b1.jpg",
-    imageUrl: require('../../assets/images/Darius.jpg')
+    imageUrl: require('../../assets/images/Mme_KOUNDA.jpg')
   },
   {
     id: 3,
@@ -475,7 +475,7 @@ export const ABOUT = [
     description: "",
     // imageUrl:
     //   "https://cloud.githubusercontent.com/assets/21040043/24240422/20d84f6c-0fe4-11e7-8f1d-9dbc594d0cfa.jpg",
-    imageUrl: require('../../assets/images/Yann.jpg')
+    imageUrl: require('../../assets/images/Mr_Deric.jpg')
   },
   {
     id: 4,
@@ -484,7 +484,7 @@ export const ABOUT = [
     description: "",
     // imageUrl:
     //   "https://cloud.githubusercontent.com/assets/21040043/24240422/20d84f6c-0fe4-11e7-8f1d-9dbc594d0cfa.jpg",
-    imageUrl: require('../../assets/images/Dianela.jpg')
+    imageUrl: require('../../assets/images/Mr_MANTS.jpg')
   },
   {
     id: 5,
@@ -493,7 +493,7 @@ export const ABOUT = [
     description: "",
     // imageUrl:
     //   "https://cloud.githubusercontent.com/assets/21040043/24240422/20d84f6c-0fe4-11e7-8f1d-9dbc594d0cfa.jpg",
-    imageUrl: require('../../assets/images/Ana.jpg')
+    imageUrl: require('../../assets/images/Mme_KOUNDA.jpg')
   },
 ];
 

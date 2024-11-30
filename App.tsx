@@ -1,9 +1,10 @@
 import "react-native-gesture-handler";
+// import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import Navigator from "./routes/Navigator";
+// import Navigator from "./routes/Navigator";
 import RootNavigator from "./routes/RootNavigator";
 
 export default function App() {
